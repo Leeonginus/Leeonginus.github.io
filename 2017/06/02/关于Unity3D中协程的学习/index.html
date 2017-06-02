@@ -4,20 +4,19 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Lee&#39;S Blog</title>
+    <title>Unity中协程的学习 | Lee&#39;S Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Leeonginus">
     
-    <meta name="description" content="title:Unity中协程的学习
-tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在程序中写延迟，并没有深入的了解他的其他用法，所以抽出了时间去仔细了解了协程的定义和其他相关用法。我之前对于协程的认知程度大致处于暂停的部分。
-1234567891   IEnumer">
+    <meta name="description" content="关于Unity3D中协程的学习​    一直以来只会用协程在程序中写延迟，并没有深入的了解他的其他用法，所以抽出了时间去仔细了解了协程的定义和其他相关用法。我之前对于协程的认知程度大致处于暂停的部分。
+123456789IEnumerator Delay(int Timer)&amp;#123;     f">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="Never say Never. e.g. yangjiansky for https://twitter.com/yangjiansky" />
-    <meta name="twitter:title" content="Lee&#39;S Blog" />
+    <meta name="twitter:title" content="Unity中协程的学习 | Lee&#39;S Blog" />
       
     
     
@@ -43,7 +42,7 @@ tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在�
 				<h1 class="site-name"><a href="/" title="Lee&#39;S Blog">Lee&#39;S Blog</a></h1>
 				<h2 class="blog-motto">Never say Never.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -72,7 +71,7 @@ tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/06/02/关于Unity3D中协程的学习/" title="" itemprop="url"></a>
+      <a href="/2017/06/02/关于Unity3D中协程的学习/" title="Unity中协程的学习" itemprop="url">Unity中协程的学习</a>
   </h1>
   <p class="article-author">By
     
@@ -80,7 +79,7 @@ tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在�
     </p>
   <p class="article-time">
     <time datetime="2017-06-02T10:27:52.124Z" itemprop="datePublished">2017-06-02</time>
-    更新日期:<time datetime="2017-06-02T10:28:27.583Z" itemprop="dateModified">2017-06-02</time>
+    更新日期:<time datetime="2017-06-02T10:36:10.190Z" itemprop="dateModified">2017-06-02</time>
     
   </p>
 </header>
@@ -88,17 +87,15 @@ tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在�
 		
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tag-Unity3D"><span class="toc-number">1.</span> <span class="toc-text">tag:Unity3D</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Unity3D中协程的学习"><span class="toc-number"></span> <span class="toc-text">关于Unity3D中协程的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解"><span class="toc-number">1.</span> <span class="toc-text">#深入了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.</span> <span class="toc-text">#结束语</span></a></li></ol>
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Unity3D中协程的学习"><span class="toc-number">1.</span> <span class="toc-text">关于Unity3D中协程的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解"><span class="toc-number">1.1.</span> <span class="toc-text">#深入了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">1.2.</span> <span class="toc-text">#结束语</span></a></li></ol></li></ol>
 		</div>
 		
-		<hr>
-<p>title:Unity中协程的学习</p>
-<h2 id="tag-Unity3D"><a href="#tag-Unity3D" class="headerlink" title="tag:Unity3D"></a>tag:Unity3D</h2><h1 id="关于Unity3D中协程的学习"><a href="#关于Unity3D中协程的学习" class="headerlink" title="关于Unity3D中协程的学习"></a>关于Unity3D中协程的学习</h1><p>​    一直以来只会用协程在程序中写延迟，并没有深入的了解他的其他用法，所以抽出了时间去仔细了解了协程的定义和其他相关用法。我之前对于协程的认知程度大致处于暂停的部分。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1   IEnumerator Delay(int Timer)</div><div class="line">2   &#123;</div><div class="line">3       for (int i = Timer; i &gt;0; i--)</div><div class="line">4     	&#123;</div><div class="line">5          Debug.Log(&quot;倒计时&quot;+i+&quot;秒！&quot;);</div><div class="line">6          yield return new WaitForSeconds(1F);</div><div class="line">7      &#125;</div><div class="line">8      Debug.Log(&quot;Start!&quot;);</div><div class="line">9  &#125;</div></pre></td></tr></table></figure>
+		<h1 id="关于Unity3D中协程的学习"><a href="#关于Unity3D中协程的学习" class="headerlink" title="关于Unity3D中协程的学习"></a>关于Unity3D中协程的学习</h1><p>​    一直以来只会用协程在程序中写延迟，并没有深入的了解他的其他用法，所以抽出了时间去仔细了解了协程的定义和其他相关用法。我之前对于协程的认知程度大致处于暂停的部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">IEnumerator Delay(int Timer)</div><div class="line">&#123;</div><div class="line">     for (int i = Timer; i &gt;0; i--)</div><div class="line">  	&#123;</div><div class="line">       Debug.Log(&quot;倒计时&quot;+i+&quot;秒！&quot;);</div><div class="line">        yield return new WaitForSeconds(1F);</div><div class="line">   &#125;</div><div class="line">   Debug.Log(&quot;Start!&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>​    上述代码实现了一个简单的倒计时功能，第六行代码的功能是执行到这里的时候，发生中断，等待1秒之后再执行接下来的代码，通过<code>StartCoroutine()</code>函数进行调用。</p>
 <h2 id="深入了解"><a href="#深入了解" class="headerlink" title="#深入了解"></a>#深入了解</h2><p>在了解了协程最基本的用法之后，还需要了解他在实际Unity3d引擎中的工作流程，才能更好的了解它。</p>
-<p><img src="C:\Users\lee\Desktop\122126518282847.png" alt=""></p>
+<p><img src="C:\lover\source\postImage\122126518282847.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">void FixedUpdate()</div><div class="line">&#123;   </div><div class="line">    if (bStart)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(&quot;begin IEnumerator&quot;);</div><div class="line">        StartCoroutine(LateUpdateTest());</div><div class="line">        Debug.Log(&quot;end IEnumerator&quot;);</div><div class="line">        bStart = false;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">IEnumerator LateUpdateTest()</div><div class="line">&#123;</div><div class="line">    Debug.Log(&quot;before yield!&quot;);</div><div class="line">    yield return  new WaitForFixedUpdate();</div><div class="line">    Debug.Log(&quot;after yield!&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在lateUpdate中测试执行顺序</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">begin IEnumerator</div><div class="line">before yield!</div><div class="line">end IEnumerator</div><div class="line">after yield!</div></pre></td></tr></table></figure>
@@ -108,12 +105,17 @@ tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在�
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Unity3D/">Unity3D</a>
+  </div>
+
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/06/02/关于Unity3D中协程的学习/" data-title="Lee&#39;S Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/06/02/关于Unity3D中协程的学习/" data-title="Unity中协程的学习 | Lee&#39;S Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -135,23 +137,25 @@ tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在�
 
 	
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tag-Unity3D"><span class="toc-number">1.</span> <span class="toc-text">tag:Unity3D</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Unity3D中协程的学习"><span class="toc-number"></span> <span class="toc-text">关于Unity3D中协程的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解"><span class="toc-number">1.</span> <span class="toc-text">#深入了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.</span> <span class="toc-text">#结束语</span></a></li></ol>
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Unity3D中协程的学习"><span class="toc-number">1.</span> <span class="toc-text">关于Unity3D中协程的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解"><span class="toc-number">1.1.</span> <span class="toc-text">#深入了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">1.2.</span> <span class="toc-text">#结束语</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
+		
+			<li><a href="/tags/Unity3D/" title="Unity3D">Unity3D<sup>1</sup></a></li>
 		
 			<li><a href="/tags/hello/" title="hello">hello<sup>1</sup></a></li>
 		
