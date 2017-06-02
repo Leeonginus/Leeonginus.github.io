@@ -4,18 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | Lee&#39;S Blog</title>
+    <title>Lee&#39;S Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Leeonginus">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="title:Unity中协程的学习
+tag:Unity3D关于Unity3D中协程的学习​    一直以来只会用协程在程序中写延迟，并没有深入的了解他的其他用法，所以抽出了时间去仔细了解了协程的定义和其他相关用法。我之前对于协程的认知程度大致处于暂停的部分。
+1234567891   IEnumer">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="Never say Never. e.g. yangjiansky for https://twitter.com/yangjiansky" />
-    <meta name="twitter:title" content="Hello World | Lee&#39;S Blog" />
+    <meta name="twitter:title" content="Lee&#39;S Blog" />
       
     
     
@@ -70,15 +72,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/12/11/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2017/06/02/关于Unity3D中协程的学习/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Leeonginus">Leeonginus</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-12-11T13:03:08.842Z" itemprop="datePublished">2016-12-11</time>
-    更新日期:<time datetime="2017-05-25T10:52:52.679Z" itemprop="dateModified">2017-05-25</time>
+    <time datetime="2017-06-02T10:27:52.124Z" itemprop="datePublished">2017-06-02</time>
+    更新日期:<time datetime="2017-06-02T10:28:27.583Z" itemprop="dateModified">2017-06-02</time>
     
   </p>
 </header>
@@ -87,33 +89,31 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tag-Unity3D"><span class="toc-number">1.</span> <span class="toc-text">tag:Unity3D</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Unity3D中协程的学习"><span class="toc-number"></span> <span class="toc-text">关于Unity3D中协程的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解"><span class="toc-number">1.</span> <span class="toc-text">#深入了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.</span> <span class="toc-text">#结束语</span></a></li></ol>
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<hr>
+<p>title:Unity中协程的学习</p>
+<h2 id="tag-Unity3D"><a href="#tag-Unity3D" class="headerlink" title="tag:Unity3D"></a>tag:Unity3D</h2><h1 id="关于Unity3D中协程的学习"><a href="#关于Unity3D中协程的学习" class="headerlink" title="关于Unity3D中协程的学习"></a>关于Unity3D中协程的学习</h1><p>​    一直以来只会用协程在程序中写延迟，并没有深入的了解他的其他用法，所以抽出了时间去仔细了解了协程的定义和其他相关用法。我之前对于协程的认知程度大致处于暂停的部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1   IEnumerator Delay(int Timer)</div><div class="line">2   &#123;</div><div class="line">3       for (int i = Timer; i &gt;0; i--)</div><div class="line">4     	&#123;</div><div class="line">5          Debug.Log(&quot;倒计时&quot;+i+&quot;秒！&quot;);</div><div class="line">6          yield return new WaitForSeconds(1F);</div><div class="line">7      &#125;</div><div class="line">8      Debug.Log(&quot;Start!&quot;);</div><div class="line">9  &#125;</div></pre></td></tr></table></figure>
+<p>​    上述代码实现了一个简单的倒计时功能，第六行代码的功能是执行到这里的时候，发生中断，等待1秒之后再执行接下来的代码，通过<code>StartCoroutine()</code>函数进行调用。</p>
+<h2 id="深入了解"><a href="#深入了解" class="headerlink" title="#深入了解"></a>#深入了解</h2><p>在了解了协程最基本的用法之后，还需要了解他在实际Unity3d引擎中的工作流程，才能更好的了解它。</p>
+<p><img src="C:\Users\lee\Desktop\122126518282847.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">void FixedUpdate()</div><div class="line">&#123;   </div><div class="line">    if (bStart)</div><div class="line">    &#123;</div><div class="line">        Debug.Log(&quot;begin IEnumerator&quot;);</div><div class="line">        StartCoroutine(LateUpdateTest());</div><div class="line">        Debug.Log(&quot;end IEnumerator&quot;);</div><div class="line">        bStart = false;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">IEnumerator LateUpdateTest()</div><div class="line">&#123;</div><div class="line">    Debug.Log(&quot;before yield!&quot;);</div><div class="line">    yield return  new WaitForFixedUpdate();</div><div class="line">    Debug.Log(&quot;after yield!&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在lateUpdate中测试执行顺序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">begin IEnumerator</div><div class="line">before yield!</div><div class="line">end IEnumerator</div><div class="line">after yield!</div></pre></td></tr></table></figure>
+<p>也就是说<code>yield return  new WaitForFixedUpdate()</code>在fixupdate的下一帧执行了，这在实际项目中可以做到很多意向不到的作用，（不过我现在满脑子都是他好用的暂停效果/捂脸）</p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="#结束语"></a>#结束语</h2><p>​    在我实际的小Demo中我也只用在了暂停和倒计时上，还需要观摩一些大牛在协程方面的灵巧运用来提高自己，这篇Blog写的很粗糙，是我第一次写，很多地方理解的还不足，仅仅是把自己理解的概念通过简单的代码来实现以下，以后再遇到关于协程方面的问题还是会修改这篇Blog。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hello/">hello</a>
-  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/12/11/hello-world/" data-title="Hello World | Lee&#39;S Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/06/02/关于Unity3D中协程的学习/" data-title="Lee&#39;S Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -122,14 +122,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/06/02/关于Unity3D中协程的学习/" title="">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  (no title)</span>
+
+<div class="next">
+<a href="/2016/12/11/hello-world/"  title="Hello World">
+ <strong>NEXT:</strong><br/> 
+ <span>Hello World
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -139,7 +139,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tag-Unity3D"><span class="toc-number">1.</span> <span class="toc-text">tag:Unity3D</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Unity3D中协程的学习"><span class="toc-number"></span> <span class="toc-text">关于Unity3D中协程的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入了解"><span class="toc-number">1.</span> <span class="toc-text">#深入了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.</span> <span class="toc-text">#结束语</span></a></li></ol>
   </div>
 
 <div id="asidepart">
